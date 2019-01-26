@@ -4,7 +4,7 @@ let app = express();
 
 
 app.get('/', function(req, resp){
-    resp.send("Bienvenue visiteur !");
+    resp.send("Nouveau message d'acceuil !");
 });
 
 app.listen(8080);
