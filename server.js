@@ -1,7 +1,7 @@
 let express = require('express');
 let url = require('url');
 let app = express();
-
+let clientHandler = require('./client');
 
 
 app.get('/', function(req, resp){
@@ -13,8 +13,8 @@ app.get('/', function(req, resp){
             resp.send("Vous vous trouvez dans une année bien étrange");
         }
         else{
-            resp.send("Bienvenue en l'an : " + params.year);
-            resp.send("Ce site est destiné à vous aider !");
+            let new_c = clientHandler.createNewClient(params.year);
+            resp.send("Bienvenue en l'an : " + params.year + "\nVotre identifiant client est : " + new_c.Id + "\nVotre nom est : "+ new_c.Name);
         }
     }
     else
