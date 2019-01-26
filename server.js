@@ -14,6 +14,7 @@ app.get('/', function(req, resp){
         }
         else{
             resp.send("Bienvenue en l'an : " + params.year);
+            resp.send("Ce site est destiné à vous aider !");
         }
     }
     else
