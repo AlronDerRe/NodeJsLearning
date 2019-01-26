@@ -4,7 +4,7 @@ let app = express();
 
 
 app.get('/', function(req, resp){
-    resp.send("On a continué le dév après l'erreur");
+    resp.send("Correction erreur");
 });
 
 app.listen(8080);
