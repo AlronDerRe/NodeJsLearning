@@ -14,7 +14,7 @@ app.get('/', function(req, resp){
         }
         else{
             let new_c = clientHandler.createNewClient(params.year);
-            resp.send("Bienvenue en l'an : " + params.year + "\nVotre identifiant client est : " + new_c.Id);
+            resp.send("Bienvenue en l'an : " + params.year + "\nVotre identifiant client est : " + new_c.Id + "\nVotre nom est : "+ new_c.Name);
         }
     }
     else
